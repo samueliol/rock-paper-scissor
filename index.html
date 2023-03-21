@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getComputerChoice() {
+            var items = Array('Rock', 'Paper', 'Scissors');
+            let comp = Math.floor(Math.random() *items.length);
+            return items[comp];
+        }
+        function playRPS(playerSelection, computerSelection){
+            if (playerSelection === computerSelection){
+                console.log(`It's a Tie! ${playerSelection} and ${computerSelection}`)
+            }
+            else if(playerSelection === 'Rock') && (computerSelection === 'Paper'){
+                console.log('You Lose! Paper beats Rock')
+            }
+            else if(playerSelection === 'Rock') && (computerSelection === 'Scissors'){
+                console.log('You Win! Rock beats Scissors')
+            }
+        }
+        console.log(getComputerChoice());
+    </script>
+</body>
+</html>
